@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1, #div2, #div3{
+	float: left;
+    width: 90px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    margin:3px;
+}
+.sortable{
+	font-size: small;
+	font-style: arial;
+}
+</style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+
+</script>
+<script src="jquery.sortable.js"></script>
+</head>
+<body>
+<h3>Sortable list</h3>
+<br>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+<ul style ="list-style:none;" id="sortable1" style="text-align: left;" class="sortable list">
+	<li id = "drag1" draggable="true" ondragstart="drag(event)">Item 1</li>
+	<li id = "drag2" draggable="true" ondragstart="drag(event)">Item 2</li>
+	<li id = "drag3" draggable="true" ondragstart="drag(event)">Item 3</li>
+</ul>
+</div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+</div>
+<script>
+    $(function(){
+    	sortable('.sortable1');
+    	items: 'not(.disabled)'
+    });
+</script>
+
+</body>
+</html>

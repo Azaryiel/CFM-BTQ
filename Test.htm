@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css">
+div[id^='div']
+{float:left; width:100px; height:35px; margin:10px;padding:10px;border:1px solid #aaaaaa;}
+</style>
+<script>
+function allowDrop(ev)
+{
+ev.preventDefault();
+}
+
+function drag(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<table border="1" cellpadding="2">
+    <tr>
+        <td>
+            <table>
+                <tr><td><div id="div1" ondrop="allowDrop(event)" ondragover="drop(event)"></div></td></tr>
+                <tr><td><div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div></td></tr>
+                <tr><td><div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div></td></tr>
+                <tr><td><div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div></td></tr>
+                <tr><td><div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)"></div></td></tr>
+                <tr><td><div id="div6" ondrop="allowDrop(event)" ondragover="allowDrop(event)"></div></td></tr>
+                <tr><td><div id="div7" ondrop="allowDrop(event)" ondragover="allowDrop(event)"></div></td></tr>
+            </table>
+        </td>
+        <td>
+            <table>
+                <tr><td><div id="div10" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)" id="drag1">Order 1</div></div></td></tr>
+                <tr><td><div id="div11" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)" id="drag2">Order 2</div></div></td></tr>
+                <tr><td><div id="div12" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)" id="drag3">Order 3</div></div></td></tr>
+                <tr><td><div id="div13" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)" id="drag4">Order 4</div></div></td></tr>
+                <tr><td><div id="div14" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)" id="drag5">Order 5</div></div></td></tr>
+                <tr><td><div id="div15" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)" id="drag6">Order 4</div></div></td></tr>
+                <tr><td><div id="div16" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)" id="drag7">Order 5</div></div></td></tr>
+            </table>            
+        </td>
+    </tr>
+</table> 
+</body>
+</html>

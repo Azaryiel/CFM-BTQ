@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="//rubaxa.github.io/Sortable/Sortable.js"></script>
+<script src="dist/html.sortable.js"></script>
+<style>
+#div1, #div2, #div3{
+	float: down;
+    width: 10px;
+    height: 10px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+#div4, #div5, #div6{
+	float: left;
+    width: 10px;
+    height: 10px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+
+</style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+<h3>Question 1</h3>
+<p float=left;>If I were to plan a party,</p>
+<div id="choices" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+</div>
+<br>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">	
+</div>
+<br>
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">	
+</div>
+<br>
+<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+	<div id="drag1" draggable="true" ondragstart="drag(event)">1</div>
+</div>
+<div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)">
+	<div id="drag2" draggable="true" ondragstart="drag(event)">2</div>
+</div>
+<div id="div6" ondrop="drop(event)" ondragover="allowDrop(event)">
+	<div id="drag3" draggable="true" ondragstart="drag(event)">3</div>
+</div>
+
+
+</body>
+</html>
