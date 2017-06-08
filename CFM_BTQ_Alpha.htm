@@ -1,0 +1,622 @@
+﻿
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body class="">
+    <!-- BEGIN SITE WRAPPER -->
+    <div class="outer-wrapper">
+        <!-- BEGIN HEADER -->
+
+
+<div class="main-cols clearfix">
+  <div class="col-mid">
+    <div class="col col-main">
+
+
+
+
+    <!-- END BREADCRUMBS -->
+ 
+ 
+
+        
+    <div class="col-content">
+<!-- BEGIN PAGE HEADLINE -->
+<h1 >Behavioral Tendencies Questionnaire</h1>
+    
+<div id="btq-form" border="0">
+<div id="btq-form-instruct" border="0">&nbsp;</div>
+<div id="btq-form-title" border="0">&nbsp;</div>
+<div id="btq-form-data" border="0">&nbsp;</div>
+<div id="sortable" style="list-style:none;, margin: 10px;" border="0"></div>
+<div id="btq-form-results" border="0">
+<div id="btq-form-results-types" border="0">&nbsp;</div>
+<div class="ss-form" style="display: none;" border="0"><iframe src="" style="" frameborder="0" border="0" width="320" height="240" name="google_form"></iframe><form id="ss-form" accept-charset="utf-8" action="https://docs.google.com/forms/d/1aDRtqwjdQWuOZMOSQwU78xygevdTUVa4uU26GONv-Nw/formResponse" method="POST" target="google_form">
+<div class="ss-form-question errorbox-good" border="0">
+<div class="ss-item ss-item-required ss-text" border="0">
+<div class="ss-form-entry" border="0">
+<div class="ss-q-title" border="0">Data <label for="itemView.getDomIdToLabel()"></label> <span class="ss-required-asterisk">*</span></div>
+<input id="entry_625904908" class="ss-q-short" dir="auto" title="" type="text" required="" value="" name="entry.625904908" />
+
+<div class="required-message" border="0">This is a required question</div>
+</div>
+</div>
+</div>
+<input type="hidden" value="[,,&quot;-3657785299820665819&quot;]" name="draftResponse" /><input type="hidden" value="0" name="pageHistory" /><input type="hidden" value="0" name="fvv" /><input type="hidden" value="-3657785299820665819" name="fbzx" /><input id="ss-submit" class="jfk-button jfk-button-action" style="float: left; position: relative;" type="submit" value="Submit" name="submit" /></form></div>
+<div class="ss-form" style="display: none;" border="0"><iframe src="" style="" frameborder="0" border="0" width="320" height="240" name="google_form_feedback"></iframe><form id="ss-form" action="https://docs.google.com/forms/d/1JWM4unmUysFOmrICA0iTrj55tahM6b4IvqKM6DsnmH0/formResponse" method="POST" target="google_form_feedback">
+<div class="ss-form-question errorbox-good" border="0">
+<div class="ss-item ss-item-required ss-text" border="0">
+<div class="ss-form-entry" border="0">
+<div class="ss-q-title" border="0">data <label for="itemView.getDomIdToLabel()"></label> <span class="ss-required-asterisk">*</span></div>
+<input id="entry_2027781924" class="ss-q-short" dir="auto" title="" type="text" required="" value="" name="entry.2027781924" />
+
+<div class="required-message" border="0">This is a required question</div>
+</div>
+</div>
+</div>
+<input type="hidden" value="[,,&quot;8381362293468261559&quot;]" name="draftResponse" /><input type="hidden" value="0" name="pageHistory" /><input type="hidden" value="0" name="fvv" /><input type="hidden" value="8381362293468261559" name="fbzx" />
+<div class="ss-item ss-navigate" border="0">
+<table id="navigation-table">
+<tbody>
+<tr>
+<td id="navigation-buttons" class="ss-form-entry goog-inline-block" dir="ltr"><input id="ss-submit-1" class="jfk-button jfk-button-action " type="submit" value="Submit" name="submit" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+</form></div>
+</div>
+<button id="btq-next-btn" class="jfk-button jfk-button-action ">Next</button></div>
+<!-- END PAGE HEADLINE -->
+
+    </div>
+
+                <div class="col-container clearfix">
+
+    <div class="col-container clearfix"><div class="col col3">
+    <div class="block html-block" style="width:100%;">
+        <div class="html-wrapper">
+
+
+                <div><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+                <script  src ="https://code.jquery.com/jquery-1.12.4.js"></script>
+                <script  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript">
+'use strict';
+
+var old_hide_fields = false;
+
+var stemsAnswers = {
+	'If I were to plan a party, ...': ['...I would want it to be high energy, with lots of people.','...I would only want certain people there.', '...it would be last minute and freeform.'],
+	'When it comes to cleaning my room, I...': ['...take pride in making things look great.', '...quickly notice problems, imperfections or untidiness.', '...don\'t tend to notice or get bothered by clutter.'],
+	'I prefer to make my living space ...': ['... organized.', '... creative chaos.', '... Beautiful.'],
+	'When doing my job I like to ...': ['... consider future possibilities / wonder about the best way forward.', '... be passionate and energetic.', '... make sure everything is accurate.'],
+	'When talking to other people, I might come across as ...': ['...affectionate.', '... philosophical.', '... realistic.'],
+	'The disadvantage of my clothing style is that it may be...': ['... unimaginative.', '... mismatched or uncoordinated.', '... decadent.'],
+	'In general, I carry myself...': ['... aimlessly.', '... briskly.', '... buoyantly'],
+	'My room is ... ': ['... neatly arranged.', '... messy.', '... richly decorated.'],
+	'Generally, I tend to...': ['... be in my own world.', '... have a strong desire for things.', '... be critical, but clear thinking.'],
+	'At school, I might have been known for ...': ['...having lots of friends.','...being intellectual.', '...day-dreaming.'],
+	'I usually wear clothes in a way that is ...': ['... carefree.','...fashionable and attractive.', '... neat and orderly.'],
+	'I come across as ...': ['... thoughtful.','... absent-minded.','... affectionate.'],
+	'When other people are enthusiastic about something, I...': ['...jump on board and want to get involved.', '...might be skeptical of it.', '...go off on tangents.']
+};
+
+
+var gform_data, geoipdata, ip, lat, lng, c_code, r_name, city, zipcode;
+
+
+var stemsAnswersClassificationNormed = {
+	'DA': 'AD',
+	'AG': 'GA',
+	'DG': 'GD'
+};
+
+var stemsAnswersClassification = {
+	'If I were to plan a party, ...': ['G','A','D'],
+	'When it comes to cleaning my room, I...': ['G','A','D'],
+	'I prefer to make my living space ...': ['A','D','G'],
+	'When doing my job I like to ...': ['D','G','A'],
+	'When talking to other people, I might come across as ...': ['G','D','A'],
+	'The disadvantage of my clothing style is that it may be...': ['A','D','G'],
+	'In general, I carry myself...': ['D','A','G'],
+	'My room is ... ': ['A','D','G'],
+	'Generally, I tend to...': ['D','G','A'],
+	'At school, I might have been known for ...': ['G','A','D'],
+	'I usually wear clothes in a way that is ...': ['D','G','A'],
+	'I come across as ...': ['A','D','G'],
+	'When other people are enthusiastic about something, I...': ['G','A','D']
+};
+
+var stemsAnswersClassificationProbabilities = {"2AD": [0.762, 0.33], "5GA": [0.545, 0.075], "5GD": [0.551, 0.223], "4AD": [0.785, 0.584], "4GA": [0.519, 0.067], "4GD": [0.578, 0.313], "3GA": [0.565, 0.267], "5AD": [0.867, 0.484], "7GD": [0.789, 0.462], "11GD": [0.575, 0.212], "7GA": [0.516, 0.177], "11GA": [0.554, 0.292], "1AD": [0.77, 0.602], "6GD": [0.491, 0.154], "12GA": [0.416, 0.075], "7AD": [0.917, 0.591], "12GD": [0.812, 0.424], "6GA": [0.37, 0.1], "6AD": [0.78, 0.514], "3GD": [0.767, 0.316], "13GA": [0.614, 0.254], "11AD": [0.585, 0.235], "10AD": [0.797, 0.611], "9AD": [0.752, 0.393], "8AD": [0.747, 0.305], "10GD": [0.514, 0.208], "13GD": [0.787, 0.428], "9GD": [0.565, 0.208], "9GA": [0.544, 0.165], "8GD": [0.585, 0.169], "8GA": [0.466, 0.215], "10GA": [0.392, 0.077], "3AD": [0.892, 0.403], "12AD": [0.962, 0.679], "13AD": [0.873, 0.614], "2GA": [0.595, 0.474], "2GD": [0.717, 0.288], "1GD": [0.616, 0.284], "1GA": [0.474, 0.209]};
+
+var stemsAnswersClassificationScorableResponces = {};
+var stemsAnswersClassificationClassProbability = {};
+
+for(var key in stemsAnswersClassificationProbabilities){
+	stemsAnswersClassificationClassProbability[key] = {'c1':0, 'c2':0};
+	stemsAnswersClassificationScorableResponces[key] = 0;
+}
+
+var stemHideSelected = false;
+var stemHiddenIndex = [];
+var stemsAnswersValues = {};
+for(var key in stemsAnswers)
+	stemsAnswersValues[key] = [null,null,null];
+
+var stems = [];
+var gender = ['Male','Female','Other'];
+
+var ga_c1= 1, ga_c2= 1, gd_c1= 1, gd_c2= 1, ad_c1 = 1, ad_c2 = 1;
+
+//prior probability
+var pp_gad = 0.1675, pp_gda = 0.1777, pp_agd = 0.2107, pp_adg = 0.0787, pp_dga = 0.1929, pp_dag = 0.1726;
+
+var p_gad = 1, p_gda = 1, p_agd = 1, p_adg = 1, p_dga = 1, p_dag = 1;
+
+var p_gad_y = 1, p_gda_y = 1, p_agd_y = 1, p_adg_y = 1, p_dga_y = 1, p_dag_y = 1;
+
+var p_g, p_a, p_d;
+
+stems.push("Age");
+stems.push("Gender");
+stems = stems.concat(fisherYatesShuffle(Object.keys(stemsAnswers)));
+
+stemHiddenIndex.length = stems.length;
+
+function fisherYatesShuffle(a){
+	var array = a;
+ var count = array.length,
+     randomnumber,
+     temp;
+ while(count){
+  randomnumber = Math.random() * count-- | 0;
+  temp = array[count];
+  array[count] = array[randomnumber];
+  array[randomnumber] = temp
+ }
+ return a;
+}
+
+function onSliderFeedback(){
+	var data_val = parseInt($('#btq-slider-feedback').val());
+
+	var data = {
+		'id': gen_id,
+		'feedback_level': data_val
+	};
+
+	$('#entry_2027781924').val(JSON.stringify(data));
+
+	$('#ss-submit-1').click();
+	$('#sliderish').hide();
+}
+
+function createUUID(){
+	//Create UUID for the browser
+	// http://www.ietf.org/rfc/rfc4122.txt
+	var s = [];
+	var hexDigits = "0123456789abcdef";
+	for (var i = 0; i < 36; i++) {
+		s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
+	}
+	s[14] = "4"; // bits 12-15 of the time_hi_and_version field to 0010
+	s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1); // bits 6-7 of the clock_seq_hi_and_reserved to 01
+	s[8] = s[13] = s[18] = s[23] = "-";
+	var uuid = s.join("");
+	return uuid;
+}
+
+function roundNumber(num) {
+	var dec = 3;
+	var result = Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec);
+	return result;
+}
+
+function computeScores(){
+	for(var i=2; i< stems.length; i++){
+		var r_index = (i-1).toString();
+		var temp_hidden_index_val = stemHiddenIndex[i];
+		var temp_stemp_answer_vals = stemsAnswersValues[stems[i]];
+		var temp_indecies_norm = [];
+		temp_indecies_norm.length = temp_stemp_answer_vals.length;
+
+		var temp_index_class_map = {};
+		var temp_indecies_norm_map = {};
+
+
+		for(var j=0; j<stemsAnswersClassification[stems[i]].length; j++){
+			if(old_hide_fields == true){
+				temp_index_class_map[stemsAnswersClassification[stems[i]][j]] = j;
+				if(j == temp_hidden_index_val){
+					temp_indecies_norm_map[stemsAnswersClassification[stems[i]][j]] = 2;
+					continue;
+				}else
+					temp_indecies_norm_map[stemsAnswersClassification[stems[i]][j]] = temp_stemp_answer_vals[j] ==0?1:3;
+			}else{
+				temp_indecies_norm_map[stemsAnswersClassification[stems[i]][j]] = temp_stemp_answer_vals[j];
+			}
+		}
+
+		var pair1 = r_index +'GA';
+		var pair2 = r_index + 'GD';
+		var pair3 = r_index + 'AD';
+
+		stemsAnswersClassificationScorableResponces[pair1] = temp_indecies_norm_map['G'] < temp_indecies_norm_map['A']?1:0;
+		stemsAnswersClassificationScorableResponces[pair2] = temp_indecies_norm_map['G'] < temp_indecies_norm_map['D']?1:0;
+		stemsAnswersClassificationScorableResponces[pair3] = temp_indecies_norm_map['A'] < temp_indecies_norm_map['D']?1:0;
+
+		stemsAnswersClassificationClassProbability[pair1]['c1'] = stemsAnswersClassificationScorableResponces[pair1] == 1?stemsAnswersClassificationProbabilities[pair1][0]: 1-stemsAnswersClassificationProbabilities[pair1][0];
+		
+		stemsAnswersClassificationClassProbability[pair1]['c2'] = stemsAnswersClassificationScorableResponces[pair1] == 1?stemsAnswersClassificationProbabilities[pair1][1]: 1-stemsAnswersClassificationProbabilities[pair1][1];
+		
+		stemsAnswersClassificationClassProbability[pair2]['c1'] = stemsAnswersClassificationScorableResponces[pair2] == 1?stemsAnswersClassificationProbabilities[pair2][0]: 1-stemsAnswersClassificationProbabilities[pair2][0];
+		
+		stemsAnswersClassificationClassProbability[pair2]['c2'] = stemsAnswersClassificationScorableResponces[pair2] == 1?stemsAnswersClassificationProbabilities[pair2][1]: 1-stemsAnswersClassificationProbabilities[pair2][1];
+		
+		stemsAnswersClassificationClassProbability[pair3]['c1'] = stemsAnswersClassificationScorableResponces[pair3] == 1?stemsAnswersClassificationProbabilities[pair3][0]: 1-stemsAnswersClassificationProbabilities[pair3][0];
+		
+		stemsAnswersClassificationClassProbability[pair3]['c2'] = stemsAnswersClassificationScorableResponces[pair3] == 1?stemsAnswersClassificationProbabilities[pair3][1]: 1-stemsAnswersClassificationProbabilities[pair3][1];
+	}
+}
+
+function computeProbability(){
+	for(var key in stemsAnswersClassificationClassProbability){
+		if(key.indexOf('GA') > -1){
+			ga_c1 *= stemsAnswersClassificationClassProbability[key]['c1'];
+			ga_c2 *= stemsAnswersClassificationClassProbability[key]['c2'];
+		}else if(key.indexOf('GD') > -1){
+			gd_c1 *= stemsAnswersClassificationClassProbability[key]['c1'];
+			gd_c2 *= stemsAnswersClassificationClassProbability[key]['c2'];
+		}else if(key.indexOf('AD') > -1){
+			ad_c1 *= stemsAnswersClassificationClassProbability[key]['c1'];
+			ad_c2 *= stemsAnswersClassificationClassProbability[key]['c2'];
+		}
+	}
+
+	p_gad = ga_c1*gd_c1*ad_c1;
+	p_gda = ga_c1*gd_c1*ad_c2;
+	p_agd = ga_c2*gd_c1*ad_c1;
+	p_adg = ga_c2*gd_c2*ad_c1;
+	p_dga = ga_c1*gd_c2*ad_c2;
+	p_dag = ga_c2*gd_c2*ad_c2;
+	
+	var temp_sum_prod = (pp_gad*p_gad) + (pp_gda * p_gda) + (pp_agd * p_agd) + (pp_adg * p_adg) + (pp_dga * p_dga) + (pp_dag * p_dag);
+	
+	p_gad_y = (pp_gad * p_gad)/(temp_sum_prod);
+	p_gda_y = (pp_gda * p_gda)/(temp_sum_prod);
+	p_agd_y = (pp_agd * p_agd)/(temp_sum_prod);
+	p_adg_y = (pp_adg * p_adg)/(temp_sum_prod);
+	p_dga_y = (pp_dga * p_dga)/(temp_sum_prod);
+	p_dag_y = (pp_dag * p_dag)/(temp_sum_prod);
+
+	p_g = p_gad_y + p_gda_y;
+	p_a = p_agd_y + p_adg_y;
+	p_d = p_dga_y +p_dag_y;
+}
+
+
+
+function genderAnswersClick(event){
+	var $clickedDiv = $(event.currentTarget);
+	var data_val = parseInt($clickedDiv.attr('id').split('-')[1]);
+	localStorage.setItem('gender', data_val);
+	update_btq();
+}
+
+function preloadBTGPage(event){
+	eventHandlers();
+	get_local_data();
+	update_btq();
+}
+
+function eventHandlers(){
+	$('#btq-form').on('click', '.genderIconsTd', genderAnswersClick);
+	$('#btq-next-btn').on('click', next_button);
+	$('#btq-form').on('click', '.stem_selector', selectHideNonSelectedOption);
+	$('#btq-form').on('click', '.hide_selector', hideSelectorShowSelections)
+}
+
+function fieldSelected(event, type){
+	var value = parseInt(event.target.value);
+	localStorage.setItem(type, value);
+	selectHideNonSelectedOption(event);
+}
+
+function isNumberKey(evt, type, q_index){
+	var charCode = (evt.which) ? evt.which : evt.keyCode;
+	if (charCode == 8)
+		evt.target.value ='';
+	if (charCode == 46 && evt.target.value.split('.').length>1) {
+		return false;
+	}
+	if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57))
+		return false;
+
+	var new_value = evt.target.value + String.fromCharCode(charCode);
+
+	if (type == "temp-btq-rating"){
+		if(new_value.length > 1)
+			return false;
+
+		if(parseInt(new_value) > 3 || parseInt(new_value) < 0)
+			return false;
+
+		localStorage.setItem(type, parseInt(new_value));
+		selectHideNonSelectedOption(evt);
+	}else{
+		localStorage.setItem(type, parseInt(new_value));
+	}
+	
+	
+	return true;
+}
+
+function hideSelectorShowSelections(event){
+	var $clickedDiv = $(event.currentTarget);
+	var data_val = parseInt($clickedDiv.attr('id').split('-')[1]);
+	stemHiddenIndex[question_count] = data_val;
+	for(var x=0; x<stemsAnswersValues[stems[question_count]].length; x++){
+		$('#btq-m-' + x.toString()).show();
+		$('#btq-l-' + x.toString()).show();
+	}
+	$('#stem-' + data_val.toString()).hide();
+	$('.hide_selector').hide();
+	stemHideSelected = true;
+}
+
+function selectHideNonSelectedOption(event){
+	var $clickedDiv = $(event.currentTarget);
+
+	if(old_hide_fields == true){
+		var data_val = parseInt($clickedDiv.attr('id').split('-')[2]);
+		var ml = $clickedDiv.attr('id').split('-')[1];
+		var q_count = [0,0,0];	
+		
+		if(ml == 'm')
+			stemsAnswersValues[stems[question_count]][data_val] = 0;
+		else
+			stemsAnswersValues[stems[question_count]][data_val] = 1; 
+		
+		
+
+		for(var x=0; x<stemsAnswersValues[stems[question_count]].length; x++){
+			if (stemsAnswersValues[stems[question_count]][x] != null)
+				q_count[x] = 1;
+		}
+
+		if(q_count.reduce(function(a, b) { return a + b; }, 0) > 1){
+			for(var x=0; x<stemsAnswersValues[stems[question_count]].length; x++){
+				if (stemsAnswersValues[stems[question_count]][x] == null)
+					$('#stem-' + x.toString()).hide();
+			}
+		}else{
+			for(var x=0; x<stemsAnswersValues[stems[question_count]].length; x++){
+				$('#stem-' + x.toString()).show();
+			}
+		}
+
+		if(ml == 'm'){
+			if(data_val == 0 && stemHiddenIndex[question_count] != data_val){
+				stemsAnswersValues[stems[question_count]][1] = 1; 
+				stemsAnswersValues[stems[question_count]][2] = 1; 
+			}else if(data_val == 1  && stemHiddenIndex[question_count] != data_val){
+				stemsAnswersValues[stems[question_count]][0] = 1; 
+				stemsAnswersValues[stems[question_count]][2] = 1; 
+			}else if(data_val == 2  && stemHiddenIndex[question_count] != data_val){
+				stemsAnswersValues[stems[question_count]][0] = 1; 
+				stemsAnswersValues[stems[question_count]][1] = 1; 
+			}
+		}else{
+			if(data_val == 0  && stemHiddenIndex[question_count] != data_val){
+				stemsAnswersValues[stems[question_count]][1] = 0; 
+				stemsAnswersValues[stems[question_count]][2] = 0; 
+			}else if(data_val == 1  && stemHiddenIndex[question_count] != data_val){
+				stemsAnswersValues[stems[question_count]][0] = 0; 
+				stemsAnswersValues[stems[question_count]][2] = 0; 
+			}else if(data_val == 2  && stemHiddenIndex[question_count] != data_val){
+				stemsAnswersValues[stems[question_count]][0] = 0; 
+				stemsAnswersValues[stems[question_count]][1] = 0; 
+			}
+		}
+	}else{
+		var data_val = parseInt($clickedDiv.attr('id').split('-')[1]);
+		var get_temp_item = parseInt(localStorage.getItem('temp-btq-rating'));
+		stemsAnswersValues[stems[question_count]][data_val] = get_temp_item;
+	}
+	
+	update_btq();
+}
+
+
+function next_button(){
+	++question_count;
+	stemHideSelected = false;
+	update_btq();
+}
+var question_count = 0;
+var instructions;
+
+
+if(old_hide_fields == true)
+	instructions = 'This questionnaire contains a number of statements about tendencies that people have.</br></br><b>This questionnaire contains 13 questions and should take about 5 minutes to complete. We do not ask for any personally identifiable information.</b></br></br>For each item, select the 1 response option that is Most True for you, as well as the option 1 response option that is Least True response option that is for you.</br></br>Note that you will only be able to select 2 options for each item by first hiding one field of each question (the field to hide will be the one you find is neither most true or least true).</br></br>';
+else
+	instructions = 'This questionnaire contains a number of statements about tendencies that people have.</br></br><b>This questionnaire contains 13 questions and should take about 5 minutes to complete. We do not ask for any personally identifiable information.</b></br></br>Please rank the following in the order that is most consistent with how you generally behave (not how you think you should behave, or how you might behave in a very specific situation). You should give your first and initial response without thinking about the question too much. Reorder the choices with the one that best fits you being on top, and the one that least fits you bein on the bottom. </br></br>';
+var gen_id = createUUID();
+
+
+$('#btq-form-instruct').html(instructions);
+$('#btq-form-instruct').show();
+
+	$( function() { //sortable function
+   	 	$( "#sortable" ).sortable();
+    	$( "#sortable" ).disableSelection();
+  		} );
+  		
+function update_btq(){
+	var form_html;
+	$('#btq-form-data').html("");
+	if(question_count < stems.length){
+		if(question_count == stems.length-1)
+			$('#btq-next-btn').html('Done');
+
+		if(stems[question_count] == 'Age'){
+			form_html = "<input type='text' class='age_id ss-q-short' value='' name='age' id='age_id' onkeypress='return isNumberKey(event, \"age_id\")' style='border: solid !important;'/>";
+			$('#btq-form-data').html(form_html);
+		}else if(stems[question_count] == 'Gender'){
+			var genderHTML = "<table class='genderTable'>" +
+                        "<tr>"+
+                        "<td class='genderIconsTd' id='gender-0'>Male</td>" +
+                        "<td class='genderIconsTd' id='gender-1'>Female</td>" +
+                        "<td class='genderIconsTd' id='gender-2'>Other</td>" +
+                        "</tr>" +
+                        "</table></div>";
+			form_html = genderHTML;
+			$('#btq-form-data').html(form_html);
+			$('#btq-form-data').show();
+			var l_gender = localStorage.getItem('gender');
+			for(var i = 0; i< gender.length; i++){
+				if(gender[i] != gender[parseInt(l_gender)])
+					$('#gender-'+i.toString()).removeClass("toggle-selected");
+				else
+					$('#gender-'+i.toString()).addClass("toggle-selected");
+			}
+		}else{
+			var temp_stem_answers = stemsAnswers[stems[question_count]];
+			var stem_html = "<table>"
+			for(var tsa_i =0; tsa_i< 1; tsa_i++){
+				if(old_hide_fields == true){}
+					else{
+						stem_html+= "<tr id='stem-"+tsa_i+"'></tr>"+
+						 "<ul id='sortable' style='list-style:none;, margin: 10px;' border='0'>"+
+						 "<li>"+temp_stem_answers[0] +"</li>"+
+						 "<li>"+temp_stem_answers[1] +"</li>"+
+						 "<li>"+temp_stem_answers[2] +"</li>"+
+						 "</ul>";	
+					}	
+			}
+			stem_html +="</table>"
+			form_html = stem_html;
+			$('#sortable').html(form_html);	
+			$('#btq-next-btn').show();
+
+			if(old_hide_fields == true){
+				if(stemHideSelected == false){
+					for(var x=0; x<stemsAnswersValues[stems[question_count]].length; x++){
+						$('#btq-m-' + x.toString()).hide();
+						$('#btq-l-' + x.toString()).hide();
+					}
+				}else{
+					for(var x=0; x<stemsAnswersValues[stems[question_count]].length; x++){
+						if(stemHiddenIndex[question_count] == x)
+							$('#stem-' + x.toString()).hide();
+					}		
+				}
+			}else{
+				var show_flag = false;
+				for(var x=0; x<stemsAnswersValues[stems[question_count]].length; x++){
+					if( stemsAnswersValues[stems[question_count]][x]  > 0)
+						show_flag = true;
+					else
+						show_flag = false;
+				}
+
+				if(show_flag == true)
+					$('#btq-next-btn').show();
+			}
+		}
+		$('#btq-form-title').html('<b>'+stems[question_count] + '</b></br></br>');
+		
+	}else{
+		computeScores();
+		computeProbability();
+		gform_data = {
+			'age': parseInt(localStorage.getItem('age_id')),
+			'gender': gender[parseInt(localStorage.getItem('gender'))],
+			'stemList': stems,
+			'answerIndex': stemsAnswersValues,
+			'hiddenIndex': stemHiddenIndex,
+			'locale': geoipdata,
+			'aversion': p_a,
+			'greed': p_g,
+			'delusion': p_d,
+			'id': gen_id,
+			'old_hide_fields': old_hide_fields
+		};
+
+		instructions = "<b>Thank you for completing the Behavioral Tendencies Questionnaire! Below is a description of the three basic types. At the bottom you'll see where you scored.</b></br></br>";
+
+		$('#btq-form-instruct').html(instructions);
+		$('#entry_625904908').val(JSON.stringify(gform_data));
+		$('#btq-form-title').hide();
+		$('#btq-next-btn').hide();
+		$('#sortable').show();
+		$('#btq-next-btn').hide();
+
+		//$('#ss-submit').click();
+	}
+}
+
+$(document).ready(function () { setTimeout(preloadBTGPage, 500); });
+
+
+</script>
+</div>
+        </div>
+    </div>
+</div></div>
+     
+     
+
+
+
+ 
+                </div>
+
+
+
+
+
+
+
+
+  </div>
+    <!-- END MAIN COLUMN -->
+    <!-- BEGIN RIGHT COLUMN -->
+
+    <!-- END RIGHT COLUMN -->
+ </div>
+</div>
+<!-- END MAIN CONTENT COLUMN CONTAINER -->
+        <!-- END MAIN CONTENT COLUMN CONTAINER -->
+        <!-- BEGIN FOOTER -->
+
+
+
+
+
+
+    </div>
+<script type="text/javascript">
+piAId = '185882';
+            piCId = '1186';
+
+            (function() {
+	            function async_load(){
+		            var s = document.createElement('script'); s.type = 'text/javascript';
+		            s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+		            var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+	            }
+	            if(window.attachEvent) { window.attachEvent('onload', async_load); }
+	            else { window.addEventListener('load', async_load, false); }
+            })();
+    
+    </script>
+
+</body>
+</html>
