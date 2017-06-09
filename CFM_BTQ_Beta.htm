@@ -134,9 +134,8 @@ for(var key in stemsAnswersClassificationProbabilities){
 var stemHideSelected = false;
 var stemHiddenIndex = [];
 var stemsAnswersValues = {};
-var idsInOrder = [];
 for(var key in stemsAnswers)
-	stemsAnswersValues[key] = [idsInOrder];
+	stemsAnswersValues[key] = [];
 var stems = [];
 var gender = ['Male','Female','Other'];
 var ga_c1= 1, ga_c2= 1, gd_c1= 1, gd_c2= 1, ad_c1 = 1, ad_c2 = 1;
@@ -195,7 +194,7 @@ function computeScores(){
 	for(var i=2; i< stems.length; i++){
 		var r_index = (i-1).toString();
 		var temp_hidden_index_val = stemHiddenIndex[i];
-		var temp_stemp_answer_vals = temp_stemp_answer_vals[stems[i]];
+		var temp_stemp_answer_vals = stemsAnswersValues[stems[i]];
 		var temp_indecies_norm = [];
 		temp_indecies_norm.length = temp_stemp_answer_vals.length;
 		var temp_index_class_map = {};
@@ -380,6 +379,18 @@ function selectHideNonSelectedOption(event){
 	update_btq();
 }
 function next_button(){
+			var idsInOrder = $("#sortable").sortable('toArray', {
+  	 		 attribute: 'id'
+  			});
+			console.log(idsInOrder);
+			if (question_count >= 2) {
+				for (var i = 1; i <= 3; i++) {
+					var element ='response'+i+'';
+					var idx = idsInOrder.indexOf(element)+1;
+					stemsAnswersValues[stems[question_count]].push(idx);
+				}
+				console.log(stemsAnswersValues[stems[question_count]]);
+  		}
 	++question_count;
 	stemHideSelected = false;
 	update_btq();
@@ -422,8 +433,7 @@ function update_btq(){
 				else
 					$('#gender-'+i.toString()).addClass("toggle-selected");
 			}
-		}
-			else{
+		}else{
 			var temp_stem_answers = stemsAnswers[stems[question_count]];
 			var stem_html = "<table>"
 			for(var tsa_i =0; tsa_i< 1; tsa_i++){
@@ -431,29 +441,21 @@ function update_btq(){
 					else{
 						stem_html+= "<tr id='stem-"+tsa_i+"'></tr>"+
 						 "<ul id='sortable' style='list-style:none;, margin: 10px;' border='0'>"+
-						 "<li id='0'>"+temp_stem_answers[0] +"</li>"+
-						 "<li id='1'>"+temp_stem_answers[1] +"</li>"+
-						 "<li id='2'>"+temp_stem_answers[2] +"</li>"+
+						 "<li id='response1'>"+temp_stem_answers[0] +"</li>"+
+						 "<li id='response2'>"+temp_stem_answers[1] +"</li>"+
+						 "<li id='response3'>"+temp_stem_answers[2] +"</li>"+
 						 "</ul>";	
 					}	
 			}
-			
 			stem_html +="</table>"
 			form_html = stem_html;
-			$('#sortableDiv').html(form_html);
+			$('#sortableDiv').html(form_html);	
+
 			$( function() { //sortable function
 			$( "#sortable" ).sortable();
 			$( "#sortable" ).disableSelection();
-			debugger;
-			var idsInOrder = $('#sortable').sortable('toArray',{
-				attribute:'id'
-		});	
+		} );
 
-		});
-
-
-
-		
 		$('#btq-next-btn').show();
 			if(old_hide_fields == true){
 				if(stemHideSelected == false){
